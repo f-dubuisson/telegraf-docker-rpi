@@ -8,7 +8,7 @@ script:
 # build image
 - docker build -t fdubuisson/telegraf-rpi .
 # test image
-- docker run fdubuisson/telegraf-rpi telegraf --version
+- docker run fdubuisson/telegraf-rpi telegraf version
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
